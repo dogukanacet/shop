@@ -1,0 +1,14 @@
+<div class="filter-comp">
+    <h3>{{model.title}}</h3>
+    <hr style="margin-top:0;">
+    <div class="filter-items-box">
+        <ul *ngFor="let item of model.items">
+            <li>
+                <label class="checkbox-container">
+                    <input type="checkbox" name="kadın" value="item.value">
+                    <span class="checkmark"></span>{{item.key}}
+                </label>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<ng-container *ngIf="product.discount; else elseTemplate">
+    <div id="product-card" class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{product.image}}" alt="Card image cap">
+        <img class="discount-image" src="{{product.discount_image}}" alt="discount">
+        <div class="card-body">
+            <p class="brand">{{product.brand}}</p>
+            <p class="model">{{product.model}}</p>
+            <p class="price-cont">
+                <span class="discount-amount">Sepette {{product.discount}} indirim</span>
+                <br>
+                <span class="old-price">{{product.price}}₺</span> &nbsp;
+                <span class="discount-price"> {{product.discount_price}}₺</span></p>
+            <app-button text="incele"></app-button>
+        </div>
+    </div>
+</ng-container>
+<ng-template #elseTemplate>
+    <div id="product-card" class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{product.image}}" alt="Card image cap">
+        <div class="card-body">
+            <p class="brand">{{product.brand}}</p>
+            <p class="model">{{product.model}}</p>
+            <p class="price">{{product.price}}₺</p>
+            <app-button text="incele"></app-button>
+        </div>
+    </div>
+</ng-template>

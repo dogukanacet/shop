@@ -1,0 +1,58 @@
+<html lang="tr">
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+
+<body>
+    <div class="body">
+        <app-header [navbar]="navbar"></app-header>
+        <div class="main">
+            <div class="wrapper">
+                <app-breadcrumbs></app-breadcrumbs>
+                <div class="page-top">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="page-title">
+                                <p>kadın kol saatleri</p>
+                            </div>
+                        </div>
+                        <div id="page" class="col-6">
+                            <div class="sort-dropdown">
+                            </div>
+                            <pagination-controls autoHide="true" previousLabel="Önceki" nextLabel="Sonraki" maxSize="5"
+                                class="pagination" (pageChange)="p = $event"></pagination-controls>
+                        </div>
+                    </div>
+                </div>
+                <div class="pages"></div>
+                <hr style="margin-top: 0;">
+                <div class="row">
+                    <div id="left-wrapper" class="col-3">
+                        <span *ngFor="let filter of filters" class="left-wrapper-content">
+                            <app-filter [model]="filter"> </app-filter>
+                        </span>
+                        <app-button text="listele"></app-button>
+                    </div>
+                    <div class="col-9">
+                        <div class="right-wrapper">
+                            <span *ngFor="let product of productList | paginate:{itemsPerPage:count, currentPage:p}">
+                                <app-product-card [product]="product"></app-product-card>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="page">
+                    <pagination-controls autoHide="true" previousLabel="Önceki" nextLabel="Sonraki" maxSize="5"
+                        class="pagination" (pageChange)="p = $event">
+                    </pagination-controls>
+                </div>
+            </div>
+        </div>
+        <app-footer></app-footer>
+    </div>
+</body>
+
+</html>

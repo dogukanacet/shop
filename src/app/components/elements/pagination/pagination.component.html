@@ -1,0 +1,14 @@
+<nav class="page-nav" aria-label="...">
+    <ul *ngFor="let item of [].constructor(pageCount); let i=index" class="pagination">
+        <ng-container *ngIf="activePage == i + 1; else elseTemplate">
+            <li class="page-item active">
+                <a class="page-link" href="#">{{i + 1}}</a>
+            </li>
+        </ng-container>
+        <ng-template #elseTemplate>
+            <li class="page-item">
+                <a class="page-link" href="#">{{i + 1}}</a>
+            </li>
+        </ng-template>
+    </ul>
+</nav>

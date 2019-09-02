@@ -1,0 +1,22 @@
+.sort {
+  height: 50px;
+  max-width: 150px;
+  margin-left: 10px;
+  background-color: #094545;
+}
+
+.sort-button {
+  text-align: center;
+  color: white;
+  display: flex;
+  /* text-decoration: none; */
+  height: 100%;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 17px;
+  font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+.sort-button:hover {
+  color: #bcb6b6;
+}

@@ -1,0 +1,58 @@
+<html lang="tr">
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+
+<body>
+    <div class="body">
+        <app-header [navbar]="navbar"></app-header>
+        <div class="main">
+            <div class="wrapper">
+                <app-breadcrumbs></app-breadcrumbs>
+                <div class="page-top">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="page-title">
+                                <p>kadın kol saatleri</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="sort-dropdown">
+                            </div>
+                            <app-pagination [pageCount]="pageCount" [activePage]=2></app-pagination>
+                        </div>
+                    </div>
+                </div>
+                <hr style="margin-top: 0;">
+                <div class="content">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="carousel-container">
+                                <div class="carousel-slide">
+                                    <img class="carousel-img" src="../../../assets/saat.jpg" alt="">
+                                    <img class="carousel-img" src="../../../assets/saat.jpg" alt="">
+                                    <img class="carousel-img" src="../../../assets/saat.jpg" alt="">
+                                    <img class="carousel-img" src="../../../assets/saat.jpg" alt="">
+                                    <img class="carousel-img" src="../../../assets/saat.jpg" alt="">
+                                </div>
+                                <a href="" class="previous-btn"></a>
+                                <a href="" class="next-btn"> </a>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                        </div>
+                    </div>
+                </div>
+                <div class="page">
+                    <app-pagination [pageCount]="pageCount" [activePage]=1></app-pagination>
+                </div>
+            </div>
+        </div>
+        <app-footer></app-footer>
+    </div>
+</body>
+
+</html>
