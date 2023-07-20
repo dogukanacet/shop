@@ -21,8 +21,8 @@ export class MainComponent implements OnInit {
   filters: Array<FilterModel>
   navbar: Array<any>
   pageCount: number
-  p: Number = 1;
-  count: Number = 20;
+  p: string | number = 1;
+  count: string | number = 20;
 
   ngOnInit() {
     this.productList = this.productService.getProduct()
